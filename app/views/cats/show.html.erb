@@ -1,3 +1,4 @@
+<h1><%= @cat.name %></h1>
 <%= form_for @cat, :html => { id: 'clicker', :data => {'post-url' => cat_url(@cat)} } do |f| %>
   <%= image_submit_tag @cat.image.url, id: 'cat' %>
 <% end %>
