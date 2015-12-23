@@ -1,0 +1,7 @@
+<ul>
+<% @cats.each do |cat| %>
+  <%= link_to cat, class: 'cat' do %>
+    <%= image_tag cat.image.url %>
+  <% end %>
+<% end %>
+</ul>
