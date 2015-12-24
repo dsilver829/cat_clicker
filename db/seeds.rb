@@ -5,14 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-cat = Cat.create(name: 'Cat', clicks: 0)
-File.open(Rails.root + 'public' + 'cat.jpg') do |f|
-  cat.image = f
-end
-cat.save!
+names = %w[alice bob carol donald elizabeth]
 
-chewie = Cat.create(name: 'Chewie', clicks: 0)
-File.open(Rails.root + 'public' + 'chewie.jpg') do |f|
-  chewie.image = f
+names.each do |name|
+  cat = Cat.create(name: name.titleize, clicks: 0)
+  File.open(Rails.root + 'public' + "#{name}.jpg") do |f|
+    cat.image = f
+  end
+  cat.save!
 end
-chewie.save!
