@@ -1,0 +1,8 @@
+<h1><%= cat.name %></h1>
+<%= form_for cat, :html => { id: 'clicker', :data => {'post-url' => cat_url(cat)} } do |f| %>
+  <%= image_submit_tag cat.image.url, id: 'cat' %>
+<% end %>
+<div>
+  <span id="clicks" data-get-url="<%= cat_path(cat) %>">Clicks: </span><span id="number"><%= cat.clicks %></span>
+</div>
+

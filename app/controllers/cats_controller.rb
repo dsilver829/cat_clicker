@@ -5,6 +5,10 @@ class CatsController < ApplicationController
 
   def show
     @cat = Cat.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def update

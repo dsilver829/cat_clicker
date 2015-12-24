@@ -1,10 +1,10 @@
-<ul>
+<div id="column">
 <% @cats.each do |cat| %>
-  <div>
-    <%= link_to cat, class: 'cat' do %>
-      <%= image_tag cat.image.url %>
-      <%= cat.name.titleize %>
-    <% end %>
-  </div>
+  <%= link_to cat, remote: true, class: 'cat' do %>
+    <%= image_tag cat.image.url %>
+    <%= cat.name.titleize %>
+  <% end %>
 <% end %>
-</ul>
+</div>
+<div id="main">
+</div>

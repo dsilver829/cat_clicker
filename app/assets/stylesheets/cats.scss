@@ -1,6 +1,25 @@
 // Place all the styles related to the cats controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  padding: 10px;
+}
+
+div#column {
+  display: inline-block;
+  width: 20%;
+}
+
+div#main {
+  display: inline-block;
+  width: 75%;
+  text-align: center;
+}
+
+input#cat {
+  max-width: 500px;
+}
+
 .cat {
   display: block;
   padding-bottom: 20px;
