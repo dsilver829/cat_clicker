@@ -3,7 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .cat {
   display: block;
+  padding-bottom: 20px;
+
   img {
     width: 100px;
+    display: block;
   }
 }
